@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boggle</title>
+</head>
+<body>
+    <table>
+        {% for row in board %}
+        <tr>
+          {% for cell in row %}
+          <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </table>
+      <!-- Once you have displayed the board, add a form that allows a user to submit a guess. -->
+      <!-- Added form here -->
+      <form action="/submit_guess" method="post">
+        <input type="text" name="guess" placeholder="Enter your guess">
+        <input type="submit" value="Submit">
+       </form>       
+</body>
+</html>
